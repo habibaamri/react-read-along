@@ -1,13 +1,21 @@
 import React, { Component } from 'react'
 import { ScrollView, Text, Image, View } from 'react-native'
 import DevscreensButton from '../../ignite/DevScreens/DevscreensButton.js'
-
+import RoundedButton from '../../App/Components/RoundedButton'
 import { Images } from '../Themes'
+import { StackNavigator } from 'react-navigation'
+// Screens
+import MainScreen from '../../ignite/DevScreens/MainScreen'
 
 // Styles
 import styles from './Styles/LaunchScreenStyles'
 
 export default class LaunchScreen extends Component {
+  
+  launchMainScreen = () => {
+    this.props.navigation.navigate('MainScreen')
+  }
+  
   render () {
     return (
       <View style={styles.mainContainer}>
@@ -24,6 +32,10 @@ export default class LaunchScreen extends Component {
             </Text>
           </View>
 
+          <RoundedButton onPress={this.launchMainScreen}>
+            Main screen
+          </RoundedButton>
+          
           <DevscreensButton />
         </ScrollView>
       </View>

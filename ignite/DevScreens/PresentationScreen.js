@@ -51,7 +51,7 @@ class PresentationScreen extends React.Component {
         }}>
           <Image source={Images.closeButton} />
         </TouchableOpacity>
-        <ScrollView showsVerticalScrollIndicator={false} bounces={false} style={styles.container}>
+        <ScrollView showsVerticalScrollIndicator={false} bounces={true} style={styles.container}>
           <View style={styles.centered}>
             <Image source={Images.igniteClear} style={styles.logo} />
           </View>
@@ -61,8 +61,8 @@ class PresentationScreen extends React.Component {
             are available below.
           </Text>
           <View style={styles.buttonsContainer}>
-            <ButtonBox onPress={this.openComponents} style={styles.componentButton} image={Images.components} text='Components' />
-            <ButtonBox onPress={this.openUsage} style={styles.usageButton} image={Images.usageExamples} text='Plugin Examples' />
+            <ButtonBox onPress={this.openComponents} style={styles.componentButton} image={Images.usageExamples} text='Componenets' />
+            <ButtonBox onPress={this.openUsage} style={styles.usageButton} image={Images.components} text='Plugin Examples' />
           </View>
           <View style={styles.buttonsContainer}>
             <ButtonBox onPress={this.openApi} style={styles.apiButton} image={Images.api} text='API Testing' />
